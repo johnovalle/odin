@@ -11,6 +11,19 @@ def sum(array)
   sum ||= 0
 end
 
-def multiply(x,y) #should take a splat and go through all of them
-  x*y
+def multiply(*x) #should take a splat and go through all of them
+  x.inject(:*)
 end
+
+def power(x,y)
+  x**y
+end
+
+def factorial(x)
+  if x == 0
+    1
+  else
+    (1..x).inject(:*)
+  end
+end
+  

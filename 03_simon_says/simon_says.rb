@@ -21,5 +21,13 @@ def first_word string
 end
 
 def titleize string
-  string.capitalize
+  words = string.split(' ')
+  
+  words.each do |word| 
+    word.capitalize!
+  end
+  capital_case = words.join(' ')
+  ##very ugly and lazy, it's late...
+  capital_case.gsub(/\sThe/, ' the').gsub(/\sA/, ' a').gsub(/\sOver/, ' over').gsub(/\sAnd/, ' and')
+
 end

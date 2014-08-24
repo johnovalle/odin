@@ -17,7 +17,7 @@
 #
 #
 
-require "temperature"
+require "./temperature"
 
 describe Temperature do
 
